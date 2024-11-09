@@ -37,9 +37,12 @@ React와 TypeScript 프로젝트를 위한 내부 ESLint 설정 모음.
 
 module.exports = {
   root: true,
-  extends: ["@repo/eslint-config"],
+  extends: ["@repo/eslint-config/react"],
   parserOptions: {
     project: "./tsconfig.json",
+  },
+  settings: {
+    "prettier/prettier": require("@repo/prettier-config"),
   },
 };
 ```

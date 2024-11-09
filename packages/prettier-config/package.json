@@ -1,0 +1,11 @@
+{
+  "name": "@repo/prettier-config",
+  "version": "0.0.1",
+  "private": true,
+  "files": [
+    ".prettierrc.json"
+  ],
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  }
+}

@@ -14,13 +14,14 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react-hooks/recommended"
   ],
-  plugins: ["only-warn", "react", "react-hooks", "import", "jsx-a11y"],
+  plugins: ["only-warn", "react", "react-hooks", "import", "jsx-a11y", "prettier"],
   rules: {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off",
     "react/require-default-props": "off",
     "import/prefer-default-export": "off",
+    "prettier/prettier": "warn",
   },
   globals: {
     React: true,
