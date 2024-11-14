@@ -1,0 +1,19 @@
+{
+  "name": "react-dev",
+  "private": true,
+  "version": "0.0.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "lint": "yarn workspaces run lint",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "turbo": "^2.2.3"
+  },
+  "packageManager": "yarn@1.22.22",
+  "license": "MIT"
+}
