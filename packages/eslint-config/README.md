@@ -1,66 +1,28 @@
-# `@turbo/eslint-config`
+# @repo/eslint-config
 
-React와 TypeScript 프로젝트를 위한 내부 ESLint 설정 모음.
+- 모노레포 환경에서 모든 프로젝트에 공통 ESLint 설정을 제공하기 위한 구성.
+- Airbnb 스타일 가이드, Prettier 통합, React 및 TypeScript 지원을 포함한 종합적인 ESLint 설정을 제공.
 
-<br/>
+## 설치 방법
 
-## ESLint 설정
-- Airbnb 스타일 가이드 규칙
-- React 및 React Hooks 규칙
-- TypeScript 지원
-- Prettier 통합
-
-<br/>
-
-## 사용방법
-
-### 의존성 추가
+_`package.json`, devDependencies 추가_
 
 ```json
-// ⛳️ package.json
-
 {
-  "dependencies": {
-    // ...
-    "@repo/eslint-config": "workspace:*"
-    // ...
+  //...
+  "devDependencies": {
+    //...
+    "@repo/eslint-config": "*",
   }
 }
 ```
 
-### 설정파일 작성
+### React 프로젝트라면?
 
-1. `.eslintrc.js` 파일 생성
-2. 아래 예시와 같이 작성
+_프로젝트 루트에 `eslintrc.config.js` 생성 후 아래와 같이 작성._
+
 ```js
-// ⛳️ .eslintrc.js  
+import reactConfig from "@repo/eslint-config/react.mjs";
 
-module.exports = {
-  root: true,
-  extends: ["@repo/eslint-config/react"],
-  parserOptions: {
-    project: "./tsconfig.json",
-  },
-  settings: {
-    "prettier/prettier": require("@repo/prettier-config"),
-  },
-};
+export default [...reactConfig];
 ```
-
-### TypeScript 설정
-
-> 프로젝트 루트에 `tsconfig.json` 파일이 있는지 확인!
-
-```json
-// ⛳️ tsconfig.json
-{ 
-  "extends": "@repo/typescript-config/react.json" 
-}
-```
-
-<br/>
-
-## 주의사항
-- TypeScript 프로젝트에서만 사용
-- 프로젝트 루트에 `tsconfig.json` 파일이 있어야 함.
-- Prettier와 함께 사용할 경우, Prettier 설정이 ESLint 규칙보다 우선
