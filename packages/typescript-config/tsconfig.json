@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "esnext",       // JavaScript 코드가 컴파일될 ECMAScript의 버전 (최신 버전 ESNext 사용)
+    "module": "esnext",       // 모듈 시스템을 최신 ECMAScript 모듈로 설정 (import/export 문법 지원)
+    "lib": ["dom", "esnext"], // TypeScript가 참조할 라이브러리 설정 (브라우저 API와 최신 ES 기능 포함)
+    "allowJs": true,          // JavaScript 파일을 TypeScript 프로젝트에서 사용할 수 있도록 허용
+    "skipLibCheck": true,     // 라이브러리 파일의 타입 검사 생략 (빌드 속도 향상에 도움)
+    "esModuleInterop": true,  // CommonJS와 ES 모듈 간의 원활한 호환성을 지원
+    "strict": true,           // 엄격한 타입 검사 수행
+    "forceConsistentCasingInFileNames": true, // 파일 경로의 대소문자 일관성을 강제
+    "noFallthroughCasesInSwitch": true, // switch 문에서 case 절에 대한 fallthrough(누락)를 허용하지 않음
+    "moduleResolution": "node", // Node.js 방식의 모듈 해석을 사용하여 import 경로를 찾음
+    "resolveJsonModule": true, // JSON 파일을 모듈처럼 import 할 수 있도록 허용
+    "isolatedModules": true,   // 모든 파일을 독립된 모듈로 간주하여 빠르게 컴파일 가능 (주로 Babel 사용 시 설정)
+    "noEmit": true             // 컴파일 시 .js 파일 등 산출물을 생성하지 않음
+  }
+}
