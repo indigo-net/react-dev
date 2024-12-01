@@ -1,4 +1,10 @@
+import SearchBar from './search-bar'
+
 const Home = () => {
-  return <h1>Home Page</h1>
+  return (
+    <div>
+      <SearchBar />
+    </div>
+  )
 }
 export default Home
