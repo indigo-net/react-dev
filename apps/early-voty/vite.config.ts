@@ -7,4 +7,9 @@ export default defineConfig({
   server: {
     port: 7200,
   },
+  css: {
+    modules: {
+      localsConvention: 'camelCase',
+    },
+  },
 })
