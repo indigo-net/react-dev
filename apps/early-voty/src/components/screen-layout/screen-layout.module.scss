@@ -1,0 +1,22 @@
+@use '../../libs/sass/mixins/_flex-layout.scss' as FlexLayout;
+@use '../../libs/sass/tokens/_color.scss' as Color;
+
+.main-layout {
+  @include FlexLayout.justify-center;
+  margin: 0 auto;
+  height: 100dvh;
+  background-color: Color.$white;
+  overflow: hidden;
+}
+
+.main-box {
+  width: 624px;
+  height: 100%;
+  padding: 10px;
+
+  border-left: 1px solid Color.$black;
+  border-right: 1px solid Color.$black;
+
+  overflow: auto;
+  @include FlexLayout.flex-wrap;
+}

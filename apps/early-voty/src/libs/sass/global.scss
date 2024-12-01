@@ -1,0 +1,31 @@
+@use './tokens/_color' as Color;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  font-size: 62.5%;
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* ======= 스크롤바 ======= */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: Color.$scroll-thumb;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+}
